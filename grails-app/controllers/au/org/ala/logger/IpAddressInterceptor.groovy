@@ -24,6 +24,7 @@ class IpAddressInterceptor {
         log.debug "Checking if ${ip} == ${loggerService.findRemoteAddress(ip)} (via ${request.requestURI})"
 
         if (!loggerService.findRemoteAddress(ip)) {
+            log.warn "Unknown ip address ${ip}"
             response.setStatus(HttpStatus.UNAUTHORIZED.value)
             result = false
         }
