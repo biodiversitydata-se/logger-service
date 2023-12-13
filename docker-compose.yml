@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
 
   mysqldb:
@@ -10,7 +12,7 @@ services:
       MYSQL_USER: logger
       MYSQL_PASSWORD: logger
     ports:
-      - 3306:3306
+      - "3306:3306"
 
   logger:
     depends_on:
@@ -19,15 +21,9 @@ services:
     build:
       context: .
     ports:
-      - 8080:8080
+      - "8080:8080"
     volumes:
       - ./sbdi/data/config/logger-config.properties:/data/logger/config/logger-config.properties
 
 volumes:
   db_data_logger:
-#  db_data_logger_prod:
-#    driver: local
-#    driver_opts:
-#      type: none
-#      o: bind
-#      device: "/home/mats/Documents/sbdi/logger/db_data_logger"

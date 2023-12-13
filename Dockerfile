@@ -1,5 +1,7 @@
 FROM tomcat:9.0-jdk11-temurin
 
+ENV TZ=Europe/Stockholm
+
 RUN mkdir -p /data/logger/config
 
 COPY build/libs/logger-service-*-plain.war $CATALINA_HOME/webapps/ROOT.war
