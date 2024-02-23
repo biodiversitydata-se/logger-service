@@ -6,10 +6,6 @@ import au.org.ala.web.AlaSecured
 class AdminController {
 
     def index () {
-        // SBDI: for unknown reasons the above annotation doesn't work for this controller
-        if(!request.isUserInRole("ROLE_ADMIN"))
-            redirect(controller: 'logger', action: 'notAuthorised')
-
         render(view: "admin")
     }
 
