@@ -1,9 +1,7 @@
-version: '3.8'
-
 services:
 
   mysqldb:
-    image: mysql:5.7
+    image: mysql:8.0
     volumes:
       - db_data_logger:/var/lib/mysql
     environment:
