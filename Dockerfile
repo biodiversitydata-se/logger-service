@@ -6,7 +6,7 @@ RUN mkdir -p /data/logger/config
 
 COPY build/libs/logger-service-*-plain.war $CATALINA_HOME/webapps/ROOT.war
 
-ENV DOCKERIZE_VERSION v0.7.0
+ENV DOCKERIZE_VERSION=v0.9.3
 
 RUN apt-get update \
     && apt-get install -y wget \
