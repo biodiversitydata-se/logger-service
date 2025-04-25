@@ -52,6 +52,8 @@ configurations {
     developmentOnly
     runtimeClasspath {
         extendsFrom developmentOnly
+        // https://github.com/apache/grails-core/issues/13547
+        exclude group: 'org.grails', module: 'grails-shell'
     }
 }
 
