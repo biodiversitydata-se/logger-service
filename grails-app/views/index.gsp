@@ -23,9 +23,6 @@
 		span.file-type-icon.csv {
 			background-color: #099114;
 		}
-		li {
-			font-size: 15px;
-		}
 	</style>
 	<script type="text/javascript">
 		$(function() {
